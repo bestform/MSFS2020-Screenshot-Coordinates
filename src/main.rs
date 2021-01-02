@@ -66,7 +66,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 
     let (tx, rx) = channel();
 
-    let mut watcher = watcher(tx, Duration::from_secs(10))
+    let mut watcher = watcher(tx, Duration::from_secs(5))
         .expect("Could not create file watcher");
 
     watcher
