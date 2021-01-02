@@ -1,0 +1,11 @@
+[package]
+name = "msfs_screenshot_coordinates"
+version = "0.1.0"
+authors = ["Matthias Derer <matthias.derer@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+notify = "4.0.12"
+msfs = { git="https://github.com/flybywiresim/msfs-rs", branch="main" }
