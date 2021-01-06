@@ -7,6 +7,6 @@ The moment a new screenshot is saved the current latitude and longitude of the p
 
 This way any screenshot that has been taking while this tool was running can be localized on a world map afterwards.
 
-To run it just execute the program with the path to your screenshot folder as the only argument.
+To run it just execute the program with the path to your screenshot folder as the only argument or by setting the environment variable `MSFS_SCREENSHOT_FOLDER`
 
 The corresponding viewer app can be found at [MSFS2020-Screenshot-Coordinates-Viewer](https://github.com/bestform/MSFS2020-Screenshot-Coordinates-Viewer)
