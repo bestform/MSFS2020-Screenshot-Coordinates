@@ -1,16 +1,17 @@
-extern crate notify;
 extern crate msfs;
+extern crate notify;
 
-use std::sync::mpsc::{channel, Sender};
-use notify::{watcher, Watcher, RecursiveMode, DebouncedEvent};
-use std::time::Duration;
-use std::path::PathBuf;
-use std::{fs, thread, env};
-use msfs::sim_connect::{data_definition, Period, SimConnect, SIMCONNECT_OBJECT_ID_USER, SimConnectRecv};
-use std::sync::{RwLock, Arc};
-use std::fs::File;
-use std::io::{Write, Error};
+use std::{env, fs, thread};
 use std::env::VarError;
+use std::fs::File;
+use std::io::{Error, Write};
+use std::path::PathBuf;
+use std::sync::{Arc, RwLock};
+use std::sync::mpsc::{channel, Sender};
+use std::time::Duration;
+
+use msfs::sim_connect::{data_definition, Period, SimConnect, SIMCONNECT_OBJECT_ID_USER, SimConnectRecv};
+use notify::{DebouncedEvent, RecursiveMode, watcher, Watcher};
 use notify::Error::PathNotFound;
 
 struct Position {
