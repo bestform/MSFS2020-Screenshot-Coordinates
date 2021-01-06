@@ -9,25 +9,47 @@ use std::{fs, thread, env};
 use msfs::sim_connect::{data_definition, Period, SimConnect, SIMCONNECT_OBJECT_ID_USER, SimConnectRecv};
 use std::sync::{RwLock, Arc};
 use std::fs::File;
-use std::io::Write;
+use std::io::{Write, Error};
+use std::env::VarError;
+use notify::Error::PathNotFound;
 
 struct Position {
     lat: Arc<RwLock<f64>>,
     lon: Arc<RwLock<f64>>,
 }
 
-fn main() -> Result<(), Box<dyn std::error::Error>> {
+fn get_path() -> Option<PathBuf> {
 
     let args: Vec<String> = env::args().collect();
-    if args.len() != 2 {
-        println!("Please provide the path to the folder where your screenshots are stored as an argument");
+
+    if args.len() == 2 {
+        return Some(PathBuf::from(&args[1].to_string()));
+    }
+    let from_env = env::var("MSFS_SCREENSHOT_FOLDER");
+    match from_env {
+        Ok(s) => {
+            return Some(PathBuf::from(s.to_string()));
+        }
+        Err(_) => {}
+    }
+
+    None
+}
+
+fn main() -> Result<(), Box<dyn std::error::Error>> {
+
+    let path = get_path();
+
+    if path.is_none() {
+        println!("Please provide the path to the folder where your screenshots are stored as an argument or in the Environment as MSFS_SCREENSHOT_FOLDER");
         return Ok(());
     }
 
-    let path = PathBuf::from(&args[1]);
+    let path = path.unwrap();
+
     if !path.exists() || !path.is_dir() {
-        println!("Path must exists and be a directory");
-        return Ok(());
+        println!("Please provide a valid path to the folder where your screenshots are stored");
+        return Ok(())
     }
 
     let current_pos = Position{
