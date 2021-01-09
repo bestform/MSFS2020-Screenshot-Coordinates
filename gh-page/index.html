@@ -1,0 +1,161 @@
+<!DOCTYPE HTML>
+<!--
+	Stellar by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>MSFS Screenshot Coordinates</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header" class="alt">
+						<span class="logo"><img src="images/logo.svg" alt="" /></span>
+						<h1>MSFS Screenshot Coordinates</h1>
+						<p>Geo Tags For Your Screenshots</p>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<li><a href="#intro" class="active">About</a></li>
+							<li><a href="#first">What's in the Box?</a></li>
+							<li><a href="#cta">Downloads</a></li>
+							<li><a href="#second">Get started</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Introduction -->
+							<section id="intro" class="main">
+								<div class="spotlight">
+									<div class="content">
+										<header class="major">
+											<h2>What is it?</h2>
+										</header>
+										<p><strong>MSFS Screenshot Coordinates</strong> is a program for MSFS 2020 that will write the current location of your plane whenever you take a screenshot.
+											<br />
+											<br />
+										The tool with which you take your screenshots is not important. You just tell MSFS Screenshot Coordinates the folder in which
+										your screenshots will be saved and it will watch that folder. As soon as it discovers a new screenshot it will communicate with
+										the running sim via simconnect and write the coordinates to an additional file besides the taken screenshot.</p>
+									</div>
+									<span class="image"><img src="images/pic01.png" alt="" /></span>
+								</div>
+							</section>
+
+						<!-- First Section -->
+							<section id="first" class="main special">
+								<header class="major">
+									<h2>What's in the Box?</h2>
+								</header>
+								<ul class="features">
+									<li>
+										<span class="icon solid style3 fa-plane"></span>
+										<h3>MSFS Screenshot Coordinates</h3>
+										<p>The program that connects to your sim and writes the files with the coordinates</p>
+									</li>
+									<li>
+										<span class="icon solid style5 fa-map"></span>
+										<h3>MSFS Screenshot Coordinates Viewer</h3>
+										<p>A viewer program that hosts a website on your local machine displaying an open street world map with a pin for every screenshot.</p>
+									</li>
+								</ul>
+							</section>
+
+						<!-- Get Started -->
+						<section id="cta" class="main special">
+							<header class="major">
+								<h2>Downloads</h2>
+								<p>Go to the respective releases page and download the latest release. You do not need the source code, just the zipped release.</p>
+							</header>
+							<footer class="major">
+								<ul class="actions special">
+									<li><a href="https://github.com/bestform/MSFS2020-Screenshot-Coordinates/releases" class="button">Get MSFS Screenshot Coordinates</a></li>
+									<li><a href="https://github.com/bestform/MSFS2020-Screenshot-Coordinates-Viewer/releases" class="button">Get the Viewer</a></li>
+								</ul>
+							</footer>
+						</section>
+
+
+						<!-- Second Section -->
+							<section id="second" class="main">
+								<div class="spotlight">
+									<div class="content">
+										<header class="major">
+											<h2>Get started</h2>
+										</header>
+
+										<p>
+											Download each program and unzip to a place of your choice.<br/>
+											To start the background program run a command prompt, navigate to the folder
+											you extracted the program to and start is as follows:<br/>
+										</p>
+										<div style="font-family: 'Courier New', monospace; background: black; color: white; text-align: left; padding: 5px">
+											C:\FolderOfTheTool> msfs_screenshot_coordinates.exe
+											"PATH_TO_YOUR_SCREENSHOTFOLDER"
+										</div>
+										<p>
+											<br />
+											<br />
+											To run the viewer you can go the appropriate folder and execute
+										</p>
+										<div style="font-family: 'Courier New', monospace; background: black; color: white; text-align: left; padding: 5px">
+											C:\FolderOfTheViewer> viewer.exe -d
+											"PATH_TO_YOUR_SCREENSHOTFOLDER"
+										</div>
+										<p>
+											<br />
+											After that you can open http://localhost:8080/index.html" to view the world map.<br />
+										</p>
+										<header class="major">
+											<h2>Use an ENVIRONMENT VARIABLE for the path</h2>
+										</header>
+										<p>
+											To make life easier you can set an Environment Variable to the path of your screenshot folder. Name it MSFS_SCREENSHOT_FOLDER.<br />
+											This way you can just start both tools by double clicking them in the explorer.<br />
+											If you want to know how to set an Environment Variable, refer to the interwebs, for example this <a href="http://www.dowdandassociates.com/blog/content/howto-set-an-environment-variable-in-windows-command-line-and-registry/">Blogpost</a>
+										</p>
+									</div>
+								</div>
+							</section>
+
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<section>
+							<ul class="icons">
+								<li><a href="https://twitter/bestform" class="icon brands fa-twitter alt"><span class="label">Twitter</span></a></li>
+								<li><a href="https://instagram.com/bestform" class="icon brands fa-instagram alt"><span class="label">Instagram</span></a></li>
+								<li><a href="https://github.com/bestform" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
+							</ul>
+						</section>
+						<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
